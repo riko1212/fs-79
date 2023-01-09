@@ -21,12 +21,44 @@ body {
   font-family: 'open sans', sans-serif;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding-left: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+}
+
 .list {
   list-style: none;
 }
 
 .link {
   text-decoration: none;
+}
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  outline: 2px solid red;
 }
 
 .visually-hidden {
@@ -70,6 +102,8 @@ body {
 
 .header {
   background-color: gray;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 .header-navigation {
 }
@@ -88,6 +122,10 @@ body {
   color: #ffffff;
 }
 
+.current {
+  color: var(--accent-color);
+}
+
 .header-link:hover,
 .header-link:focus {
   color: var(--accent-color);
@@ -103,13 +141,6 @@ body {
 }
 
 .header-btn {
-  font-family: inherit;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 1.33;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  cursor: pointer;
   color: #ffffff;
 }
 
@@ -155,6 +186,8 @@ body {
 /*-------------- ABOUT----------------- */
 
 .about {
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 .about-list {
 }
@@ -164,30 +197,27 @@ body {
 }
 .about-suptitle {
   color: #303030;
+  margin-bottom: 20px;
 }
 .about-title {
   color: var(--second-title-color);
+  margin-bottom: 20px;
 }
 .about-subtitle {
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
   color: #555555;
+  margin-bottom: 20px;
 }
 .about-text {
   font-size: 14px;
   line-height: 1.86;
   letter-spacing: 0.02em;
   color: #555555;
+  margin-bottom: 42px;
 }
 .about-btn {
-  font-family: inherit;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 1.33;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  cursor: pointer;
   color: #303030;
 }
 
@@ -195,16 +225,23 @@ body {
 
 .prices {
   background-color: #303030;
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 .prices-suptitle {
   color: rgba(157, 164, 189, 0.6);
+  margin-bottom: 20px;
 }
 .prices-title {
   color: var(--main-title-color);
+  margin-bottom: 44px;
 }
 .prices-list {
+  border: 1px solid #ffffff;
+  padding: 30px 20px;
 }
-.prices-item {
+.prices-item:not(:last-child) {
+  margin-bottom: 20px;
 }
 .prices-item-text {
   font-size: 18px;
@@ -220,6 +257,8 @@ body {
 /*-------------- BENEFITS----------------- */
 
 .benefits {
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 .benefits-list {
 }
@@ -230,6 +269,13 @@ body {
 .benefits-list .list {
 } */
 
+.benefits-item {
+  width: 170px;
+  height: 133px;
+  border: 1px solid #000000;
+  padding: 20px 24px;
+}
+
 .benefits-item > span {
   font-weight: 700;
   font-size: 42px;
@@ -237,7 +283,13 @@ body {
   text-align: center;
   letter-spacing: 0.05em;
   color: #303030;
+  display: block;
+  margin-bottom: 6px;
 }
+
+/* .benefits-item > span::before {
+  content: '+';
+} */
 .benefits-item-text {
   font-weight: 600;
   font-size: 11px;
@@ -247,9 +299,11 @@ body {
 }
 .benefits-suptitle {
   color: #303030;
+  margin-bottom: 20px;
 }
 .benefits-title {
   color: var(--second-title-color);
+  margin-bottom: 20px;
 }
 .benefits-subtitle {
   font-size: 18px;
@@ -261,20 +315,28 @@ body {
 /*-------------- BARBERS----------------- */
 
 .barbers {
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 .barbers-suptitle {
   color: #303030;
+  margin-bottom: 20px;
 }
 
 .barbers-title {
   color: var(--second-title-color);
+  margin-bottom: 44px;
 }
 
 .barbers-list {
 }
 
 .barbers-item {
+}
+
+.barbers-content {
+  padding-top: 30px;
 }
 .barbers-item-title {
   font-weight: 400;
@@ -283,6 +345,7 @@ body {
   text-align: center;
   letter-spacing: 0.02em;
   color: #303030;
+  margin-bottom: 8px;
 }
 .barbers-item-text {
   font-size: 14px;
@@ -293,8 +356,15 @@ body {
 }
 
 /*-------------- GALLERY----------------- */
+
+.gallery {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
 .gallery-suptitle {
   color: #303030;
+  margin-bottom: 44px;
 }
 
 /*-------------- ONLINE----------------- */
