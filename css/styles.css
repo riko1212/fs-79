@@ -15,6 +15,7 @@
   --second-btn-color: #303030;
   --accent-color: #ff6c00;
   --typical-lh: 1.36;
+  --gra: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2));
 }
 
 body {
@@ -58,7 +59,6 @@ img {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  outline: 2px solid red;
 }
 
 .visually-hidden {
@@ -172,6 +172,7 @@ img {
 
 .hero-wrap {
   background-color: #626060;
+  background-image: var(--gra), url(../img/hero-bg.jpeg);
   flex-grow: 1;
   padding: 252px 100px 208px;
 }
@@ -435,7 +436,79 @@ img {
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--accent-color);
+  margin-bottom: 30px;
 }
+
+.barbers-soc-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.barbers-soc-item {
+  width: 44px;
+  height: 44px;
+}
+.barbers-soc-link {
+  width: 100%;
+  height: 100%;
+  background-color: tomato;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.barbers-soc-icon {
+  fill: #ffffff;
+}
+
+.barbers-soc-link:is(:hover, :focus) {
+  background-color: rgb(71, 27, 20);
+}
+
+.test {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.test-list {
+  display: flex;
+  gap: 30px;
+}
+
+.test-item {
+  width: calc((100% - 150px) / 6);
+  height: 90px;
+}
+.test-link {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  color: #999999;
+}
+
+.test-icon {
+  fill: currentColor;
+}
+
+.test-link:is(:hover, :focus) {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+
+
+  
+/* .test-link:is(:hover, :focus) {
+  border-color: var(--accent-color);
+}
+
+.test-link:is(:hover, :focus) .test-icon {
+  fill: var(--accent-color);
+} */
 
 /*-------------- GALLERY----------------- */
 
