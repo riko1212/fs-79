@@ -111,12 +111,19 @@ img {
   border: 1px solid #ff6c00;
   border-radius: 25px;
   background-color: transparent;
+  transition: background-color 200ms linear, color 200ms linear;
+}
+
+.btn:is(:hover, :focus) {
+  background-color: var(--accent-color);
+  color: #ffffff;
 }
 
 /*-------------- HEADER----------------- */
 
 .header {
-  background-color: gray;
+  position: absolute;
+  width: 100%;
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -146,10 +153,23 @@ img {
   line-height: 1.33;
   letter-spacing: 0.1em;
   color: #ffffff;
+  transition: color 200ms linear;
 }
 
 .current {
   color: var(--accent-color);
+  position: relative;
+}
+
+.current::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -54px;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent-color);
 }
 
 .header-link:hover,
@@ -165,6 +185,12 @@ img {
   text-transform: uppercase;
   color: var(--main-title-color);
   margin-right: 43px;
+  transition: color 200ms linear;
+}
+
+.header-tel:hover,
+.header-tel:focus {
+  color: var(--accent-color);
 }
 
 .header-btn {
@@ -186,17 +212,36 @@ img {
   flex-grow: 1;
   padding: 252px 100px 208px;
 }
-.hero-list {
+
+.hero-soc {
   width: 100px;
+  display: flex;
+  align-items: flex-end;
+  padding-left: 27px;
+  padding-bottom: 40px;
 }
-.hero-item {
+.hero-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  transform: rotate(-90deg) translateY(100%);
+  transform-origin: bottom left;
 }
+
+.hero-list::before {
+  content: '';
+  width: 60px;
+  height: 1px;
+  background-color: #303030;
+}
+
 .hero-link {
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
   letter-spacing: 0.2em;
   color: #303030;
+  transition: color 200ms linear;
 }
 
 .hero-link:hover,
@@ -423,10 +468,13 @@ img {
   color: #303030;
   display: block;
   margin-bottom: 6px;
+  position: relative;
 }
 
 .benefits-item > span::after {
   content: '+';
+  position: absolute;
+  top: 7px;
   font-weight: 600;
   font-size: 16px;
   line-height: calc(22 / 16);
@@ -491,6 +539,29 @@ img {
   width: calc((100% - 60px) / 3);
 }
 
+.barbers-item:hover .barbers-top-text {
+  transform: translateY(0%);
+}
+
+.barbers-top-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.barbers-top-text {
+  position: absolute;
+  top: 0;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #ffffff;
+  background-color: rgba(255, 106, 0, 0.486);
+  padding: 40px;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform 200ms linear;
+  overflow: auto;
+}
+
 .barbers-content {
   padding-top: 30px;
 }
@@ -530,6 +601,7 @@ img {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+  transition: background-color 200ms linear;
 }
 
 .barbers-soc-icon {
@@ -563,6 +635,7 @@ img {
   justify-content: center;
   border-radius: 5px;
   color: #999999;
+  transition: border-color 200ms linear, color 200ms linear;
 }
 
 .test-icon {
@@ -722,4 +795,45 @@ img {
   line-height: 1.36;
   letter-spacing: 0.2em;
   color: #303030;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(48, 48, 48, 0.518);
+  transition: opacity 200ms linear, visibility 200ms linear;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scaleY(1);
+  width: 500px;
+  min-height: 500px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  transition: transform 200ms linear;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scaleY(0);
+}
+.modal-close {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #999999;
+  border-radius: 50%;
+  background-color: #555555;
+  color: #ffffff;
+  display: block;
+  margin-left: auto;
 }

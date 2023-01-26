@@ -5,72 +5,76 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Barbershop &#128136;</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@700&display=swap"
       rel="stylesheet"
     />
     <link
-      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      rel="stylesheet"
       integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link href="./css/styles.css" rel="stylesheet" />
   </head>
   <body>
     <header class="header">
       <div class="container header-container">
         <nav class="header-navigation">
-          <a href="" class="header-logo">
+          <a class="header-logo" href>
             <img src="./img/logo.svg" alt="site logo" />
           </a>
           <ul class="header-list list">
             <li class="header-item">
-              <a href="./about.html" class="header-link link current">About</a>
+              <a class="header-link link" href="./about.html">About</a>
             </li>
             <li class="header-item">
-              <a href="" class="header-link link">Services and prices</a>
+              <a class="header-link link current" href>Services and prices</a>
             </li>
             <li class="header-item">
-              <a href="#barbers" class="header-link link">Barbers</a>
+              <a class="header-link link" href="#barbers">Barbers</a>
             </li>
             <li class="header-item">
-              <a href="" class="header-link link">Contacts</a>
+              <a class="header-link link" href>Contacts</a>
             </li>
           </ul>
         </nav>
-        <a href="tel:+380441111111" class="header-tel link"
+        <a class="header-tel link" href="tel:+380441111111"
           >+38 044 111 11 11</a
         >
-        <button type="button" class="header-btn btn">Online-booking</button>
+        <button class="header-btn btn" data-modal-open type="button">
+          Online-booking
+        </button>
       </div>
     </header>
     <main>
       <section class="hero">
         <div class="container hero-container">
-          <ul class="hero-list list">
-            <li class="hero-item">
-              <a
-                href=""
-                target="_blank"
-                class="hero-link link"
-                rel="noopener noreferrer nofollow"
-                >Instagram</a
-              >
-            </li>
-            <li class="hero-item">
-              <a
-                href=""
-                target="_blank"
-                class="hero-link link"
-                rel="noopener noreferrer nofollow"
-                >Youtube</a
-              >
-            </li>
-          </ul>
+          <div class="hero-soc">
+            <ul class="hero-list list">
+              <li class="hero-item">
+                <a
+                  class="hero-link link"
+                  href
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  >Instagram</a
+                >
+              </li>
+              <li class="hero-item">
+                <a
+                  class="hero-link link"
+                  href
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  >Youtube</a
+                >
+              </li>
+            </ul>
+          </div>
           <div class="hero-wrap">
             <p class="hero-suptitle suptitle">A hair salon for men in Kyiv</p>
             <h1 class="hero-title">BarberShop</h1>
@@ -115,7 +119,7 @@
               always "on the same wave" with clients. Therefore, we are always
               ready to improve everyone who comes to us!
             </p>
-            <button type="button" class="about-btn btn">Online-booking</button>
+            <button class="about-btn btn" type="button">Online-booking</button>
           </div>
         </div>
       </section>
@@ -164,7 +168,7 @@
               </li>
             </ul>
           </div>
-          <button type="button" class="prices-btn btn">Online-booking</button>
+          <button class="prices-btn btn" type="button">Online-booking</button>
         </div>
       </section>
       <section class="benefits">
@@ -205,31 +209,44 @@
           <h2 class="barbers-title title">Our barbers</h2>
           <ul class="barbers-list list">
             <li class="barbers-item">
-              <img
-                src="./img/barbers-img-1.jpeg"
-                alt="barber image"
-                width="370"
-                height="346"
-              />
+              <div class="barbers-top-wrap">
+                <img
+                  src="./img/barbers-img-1.jpeg"
+                  alt="barber image"
+                  width="370"
+                  height="346"
+                />
+                <p class="barbers-top-text">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio
+                  accusantium quasi qui ut voluptatum, placeat odit sint harum
+                  magni expedita nihil illum itaque officia, dignissimos
+                  nesciunt cupiditate, reprehenderit aperiam sit! Lorem ipsum
+                  dolor sit amet consectetur, adipisicing elit. Odio accusantium
+                  quasi qui ut voluptatum, placeat odit sint harum magni
+                  expedita nihil illum itaque officia, dignissimos nesciunt
+                  cupiditate, reprehenderit aperiam sit!
+                </p>
+              </div>
+
               <div class="barbers-content">
                 <h3 class="barbers-item-title">John Smith</h3>
                 <p class="barbers-item-text">Extreme Barber</p>
                 <ul class="barbers-soc-list list">
                   <li class="barbers-soc-item">
-                    <a href="" class="barbers-soc-link link">
+                    <a class="barbers-soc-link link" href>
                       <svg class="barbers-soc-icon" width="20" height="20">
                         <use href="./img/icons.svg#icon-instagram"></use>
                       </svg>
                     </a>
                   </li>
                   <li class="barbers-soc-item">
-                    <a href="" class="barbers-soc-link link"></a>
+                    <a class="barbers-soc-link link" href></a>
                   </li>
                   <li class="barbers-soc-item">
-                    <a href="" class="barbers-soc-link link"></a>
+                    <a class="barbers-soc-link link" href></a>
                   </li>
                   <li class="barbers-soc-item">
-                    <a href="" class="barbers-soc-link link"></a>
+                    <a class="barbers-soc-link link" href></a>
                   </li>
                 </ul>
               </div>
@@ -265,16 +282,16 @@
         <div class="container">
           <ul class="test-list list">
             <li class="test-item">
-              <a href="" class="test-link link"
+              <a class="test-link link" href
                 ><svg class="test-icon" width="106" height="60">
                   <use href="./img/icons.svg#icon-instagram"></use></svg
               ></a>
             </li>
-            <li class="test-item"><a href="" class="test-link link"></a></li>
-            <li class="test-item"><a href="" class="test-link link"></a></li>
-            <li class="test-item"><a href="" class="test-link link"></a></li>
-            <li class="test-item"><a href="" class="test-link link"></a></li>
-            <li class="test-item"><a href="" class="test-link link"></a></li>
+            <li class="test-item"><a class="test-link link" href></a></li>
+            <li class="test-item"><a class="test-link link" href></a></li>
+            <li class="test-item"><a class="test-link link" href></a></li>
+            <li class="test-item"><a class="test-link link" href></a></li>
+            <li class="test-item"><a class="test-link link" href></a></li>
           </ul>
         </div>
       </section>
@@ -363,21 +380,21 @@
               <ul class="contacts-list list">
                 <li class="contacts-item">
                   <a
-                    href="https://goo.gl/maps/DNSx9ZMqSHzAVsaaA"
                     class="contacts-link bold link"
+                    href="https://goo.gl/maps/DNSx9ZMqSHzAVsaaA"
                     >st. Vasilkivska, 7A<br />
                     Kyiv, 08132</a
                   >
                 </li>
                 <li class="contacts-item">
-                  <a href="tel:+380441111111" class="contacts-link link"
+                  <a class="contacts-link link" href="tel:+380441111111"
                     >+38 044 111 11 11</a
                   >
                 </li>
                 <li class="contacts-item">
                   <a
-                    href="mailto:barbershop@email.com"
                     class="contacts-link link"
+                    href="mailto:barbershop@email.com"
                     >barbershop@email.com</a
                   >
                 </li>
@@ -396,7 +413,7 @@
           <li class="footer-item">
             <a
               class="footer-link link"
-              href=""
+              href
               target="_blank"
               rel="noopener noreferrer nofollow"
               >Instagram</a
@@ -405,7 +422,7 @@
           <li class="footer-item">
             <a
               class="footer-link link"
-              href=""
+              href
               target="_blank"
               rel="noopener noreferrer nofollow"
               >Youtube</a
@@ -414,5 +431,11 @@
         </ul>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-close" data-modal-close type="button">X</button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
