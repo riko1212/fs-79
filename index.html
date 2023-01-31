@@ -431,11 +431,75 @@
         </ul>
       </div>
     </footer>
-    <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop" data-modal>
       <div class="modal">
         <button class="modal-close" data-modal-close type="button">X</button>
+        <p class="modal-title">Заголовок модального вікна</p>
+        <form class="modal-form">
+          <label class="modal-input-text"
+            ><span>Введіть імя*</span>
+            <span class="input-wrap">
+              <input
+                class="modal-input"
+                name="user-name"
+                type="text"
+                placeholder="Микола"
+                required
+                minlength="2"
+              />
+              <svg class="modal-input-icon" width="18" height="18">
+                <use href="./img/icons.svg#icon-person"></use>
+              </svg>
+            </span>
+          </label>
+          <div class="modal-field">
+            <label class="modal-input-text" for="user-email"
+              >Введіть пошту</label
+            >
+            <div class="input-wrap">
+              <input
+                class="modal-input"
+                id="user-email"
+                name="user-email"
+                type="email"
+                placeholder="test@mail.com"
+              />
+              <svg class="modal-input-icon" width="18" height="18">
+                <use href="./img/icons.svg#icon-person"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal-field">
+            <label class="modal-input-text" for="user-tel"
+              >Введіть телефон*</label
+            >
+            <input
+              class="modal-input"
+              id="user-tel"
+              name="user-tel"
+              type="tel"
+              title="+380 (96) 111-11-11"
+              placeholder="+380 (96) 111-11-11"
+              required
+            />
+          </div>
+          <div class="modal-field">
+            <label class="modal-input-text" for="user-text"
+              >Введіть коментар</label
+            >
+            <textarea
+              class="modal-comment"
+              id="user-text"
+              name="user-text"
+              placeholder="Коментар"
+            ></textarea>
+          </div>
+          <button type="submit">Send</button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
   </body>
 </html>
+
+?user-name=Name &user-email=dwedew%40ddd& user-tel=%28096%29111-11-11
