@@ -18,6 +18,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      rel="stylesheet"
+    />
     <link href="./css/styles.css" rel="stylesheet" />
   </head>
   <body>
@@ -77,7 +82,9 @@
           </div>
           <div class="hero-wrap">
             <p class="hero-suptitle suptitle">A hair salon for men in Kyiv</p>
-            <h1 class="hero-title">BarberShop</h1>
+            <h1 class="hero-title animate__animated animate__wobble">
+              BarberShop
+            </h1>
             <p class="hero-subtitle">
               We are experts in trendy men’s haircuts. We work quickly,
               carefully and with style.
@@ -107,7 +114,9 @@
           </ul>
           <div class="about-wrap">
             <p class="about-suptitle suptitle">About</p>
-            <h2 class="about-title title">Best Barbershop in your city</h2>
+            <h2 class="about-title title" data-aos="fade-right">
+              Best Barbershop in your city
+            </h2>
             <p class="about-subtitle">
               If you want to add more confidence to your image, you should
               definitely visit us.
@@ -119,7 +128,9 @@
               always "on the same wave" with clients. Therefore, we are always
               ready to improve everyone who comes to us!
             </p>
-            <button class="about-btn btn" type="button">Online-booking</button>
+            <button class="about-btn btn" data-modal-open type="button">
+              Online-booking
+            </button>
           </div>
         </div>
       </section>
@@ -128,7 +139,9 @@
           <p class="prices-suptitle suptitle">
             Spend your time with the best masters
           </p>
-          <h2 class="prices-title title">Services and prices</h2>
+          <h2 class="prices-title title" data-aos="flip-up">
+            Services and prices
+          </h2>
           <div class="prices-wrap">
             <ul class="prices-list list">
               <li class="prices-item">
@@ -168,7 +181,9 @@
               </li>
             </ul>
           </div>
-          <button class="prices-btn btn" type="button">Online-booking</button>
+          <button class="prices-btn btn" data-modal-open type="button">
+            Online-booking
+          </button>
         </div>
       </section>
       <section class="benefits">
@@ -193,7 +208,9 @@
           </ul>
           <div class="benefits-wrap">
             <p class="benefits-suptitle suptitle">Old traditional school</p>
-            <h2 class="benefits-title title">¿Why people come to us?</h2>
+            <h2 class="benefits-title title" data-aos="zoom-in-down">
+              ¿Why people come to us?
+            </h2>
             <p class="benefits-subtitle">
               Only good things are said about us. But it's better to see and
               feel 1 time than read 10 times.
@@ -373,6 +390,26 @@
         <div class="container">
           <section class="online">
             <h2 class="online-title title">Online-booking</h2>
+            <form class="online-form">
+              <input
+                class="online-input online-item"
+                name="online-name"
+                type="text"
+                placeholder="Name*"
+              />
+              <input
+                class="online-input online-item"
+                name="online-phone"
+                type="tel"
+                placeholder="Phone*"
+              />
+              <textarea
+                class="online-text online-item"
+                name="online-message"
+                placeholder="Message"
+              ></textarea>
+              <button class="btn online-btn" type="submit">send</button>
+            </form>
           </section>
           <section class="contacts">
             <h2 class="contacts-title title">Contacts</h2>
@@ -431,7 +468,7 @@
         </ul>
       </div>
     </footer>
-    <div class="backdrop" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal-close" data-modal-close type="button">X</button>
         <p class="modal-title">Заголовок модального вікна</p>
@@ -494,11 +531,34 @@
               placeholder="Коментар"
             ></textarea>
           </div>
+
+          <div class="modal-field">
+            <input
+              class="modal-check visually-hidden"
+              id="policy"
+              name="policy"
+              type="checkbox"
+              value="true"
+              required
+            />
+            <label class="check-text" for="policy">
+              <span>
+                <svg class="check-icon" width="10" height="8">
+                  <use href="./img/icons.svg#icon-check"></use>
+                </svg>
+              </span>
+              Політика користування</label
+            >
+          </div>
           <button type="submit">Send</button>
         </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
 
