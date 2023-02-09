@@ -7,6 +7,15 @@
     max-width: 1200px;
   }
 
+  .hero-wrap {
+    padding-bottom: 210px;
+  }
+
+  .hero-title {
+    font-size: 72px;
+    line-height: 1.18;
+  }
+
   .barbers {
     padding-top: 120px;
     padding-bottom: 120px;

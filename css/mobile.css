@@ -2,4 +2,24 @@
   .container {
     max-width: 448px;
   }
+
+  .hero-container {
+    max-width: 100%;
+  }
+
+  .hero-wrap {
+    background-image: var(--gra), url(../img/hero-bg-tab.jpeg);
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero-wrap {
+      background-image: var(--gra), url(../img/hero-bg-tab-2x.jpeg);
+    }
+  }
+
+  .hero-title {
+    font-size: 48px;
+  }
 }
